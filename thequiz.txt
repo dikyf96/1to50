@@ -1,0 +1,20 @@
+The Quiz 1 : 
+How to find elements / selectors from the web user interface ?
+
+The answer 1 :
+In Selenium, you can find elements or selectors from the web user interface using various methods such as `find_element_by_id`, `find_element_by_name`, `find_element_by_xpath`, etc. In your code, you are using the `find_element_by_xpath` method to find elements.
+///////
+
+
+
+The Quiz 2 : 
+Please create a pseudocode or logic step to solve the following game using an automated test
+
+The answer 2 : 
+1. Initialize WebDriver and open the game URL. This is done in the [`launch`] function.
+2. Calculate the total page height and scroll to a quarter of the page. This is done to ensure that the game elements are in the browser display.
+3. Repeat from 1 to 50 (because the game requires clicking buttons from 1 to 50 sequentially). For each number:
+      - Wait until the button with the current number is clickable. This is done using WebDriverWait and the expected condition `element_to_be_clickable`.
+      - Click the button.
+4. If at any time an exception occurs (for example, if a button is not found or cannot be clicked), catch the exception and print an error message. This is done using a try/except block in the [`clickbutton`] function.
+5. Once all buttons are clicked the test is complete. WebDriver can be closed or left open, depending on your needs.
